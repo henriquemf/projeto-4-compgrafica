@@ -85,7 +85,7 @@ fn transform_p(p: vec3f, option: vec2f) -> vec3f
   return repeat(p, vec3f(option.y));
 }
 
-fn scene(p: vec3f) -> vec4f
+fn scene(p: vec3f) -> vec4f // xyz = color, w = distance
 {
     var d = mix(100.0, p.y, uniforms[17]);
 
