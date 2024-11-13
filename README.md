@@ -43,7 +43,7 @@ Depois que criar uma cena nova, basta apertar ```PrintScene``` (copia para o cli
 O reconhecimento é automático. 
 
 ### Nota
-You can compute your grade based on the scenes you managed to render. You can always check here (https://gubebra.itch.io/raymarching-webgpu) to validate your implementation
+Você pode calcular sua nota com base nas cenas que você fez. Você sempre pode comparar aqui (https://gubebra.itch.io/raymarching-webgpu)
 - C: ```"Sphere", "SkyAndHS", "Multiple"```
 - C+: ```"Rotation"```
 - B: ```"SoftShadows"```, ```"Animation"```
