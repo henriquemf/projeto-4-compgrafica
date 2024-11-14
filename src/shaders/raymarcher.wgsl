@@ -15,15 +15,15 @@ const MAX_DIST = 1000.0;
   var<storage, read_write> shapesinfob : array<vec4f>;
 
 struct shape {
-  transform : vec4f,
-  radius : vec4f,
-  rotation : vec4f,
-  op : vec4f,
-  color : vec4f,
-  animate_transform : vec4f,
-  animate_rotation : vec4f,
-  quat : vec4f,
-  transform_animated : vec4f,
+  transform : vec4f, // xyz = position
+  radius : vec4f, // xyz = scale, w = global scale
+  rotation : vec4f, // xyz = rotation
+  op : vec4f, // x = operation, y = k value, z = repeat mode, w = repeat offset
+  color : vec4f, // xyz = color
+  animate_transform : vec4f, // xyz = animate position value (sin amplitude), w = animate speed
+  animate_rotation : vec4f, // xyz = animate rotation value (sin amplitude), w = animate speed
+  quat : vec4f, // xyzw = quaternion
+  transform_animated : vec4f, // xyz = position buffer
 };
 
 struct march_output {
