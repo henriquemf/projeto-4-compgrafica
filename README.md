@@ -46,10 +46,12 @@ O reconhecimento é automático.
 Você pode calcular sua nota com base nas cenas que você fez. Você sempre pode comparar aqui (https://gubebra.itch.io/raymarching-webgpu)
 - C: ```"Sphere", "SkyAndHS", "Multiple"```
 - C+: ```"Rotation"```
-- B: ```"SoftShadows"```, ```"Animation"```
-- B+: ```"Union"```, ```"Subtraction"```, ```"Intersection"```, ```"Blobs"``` e criar uma cena nova (ver dicas)
-- A: Adicione uma nova primitiva geometrica ou (```"Mod"``` e ```"Outline"```)
-- A+: ```"Fractal" ou "Weird"```. Você deve fazer sua própria função de fractal ou uma cena com uma geometria maluca.
+- B: ```"Animation"```, ```"Outline"```
+- B+: ```"Union"```, ```"Subtraction"```, ```"Intersection"```, ```"Blobs"```
+- A: ```"Mod"```, ```"SoftShadows"```
+- A+: Adicione uma nova primitiva geometrica ou ```"Fractal" ou "Weird"```. Você deve fazer sua própria função de fractal ou uma cena com uma geometria maluca.
+
++ Meio conceito: veja as dicas e creie uma cena nova interessante (não somente uma esfera e pronto)
 
 ### Entrega:
 Via Blackboard, entregue o link do git.
