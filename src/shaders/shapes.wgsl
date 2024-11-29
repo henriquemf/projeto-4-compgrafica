@@ -1,16 +1,32 @@
-fn sdf_round_box(p: vec3f, b: vec3f, r: f32, quat: vec4f) -> f32
+fn sdf_round_box(p: vec3f, b: vec3f, r: f32, quat: vec4f) -> f32 
 {
-  return 0.01;
+    // Rotaciona o ponto com base no quaternion
+    let rotated_p = rotate_vector(p, quat);
+    
+    // Calcula a distância do ponto ao box arredondado
+    let q = abs(rotated_p) - b;
+    return length(max(q, vec3f(0.0))) + min(max(q.x, max(q.y, q.z)), 0.0) - r;
 }
 
-fn sdf_sphere(p: vec3f, r: vec4f, quat: vec4f) -> f32
+fn sdf_sphere(p: vec3f, r: vec4f, quat: vec4f) -> f32 
 {
-  return 0.01;
+    // Rotaciona o ponto com base no quaternion
+    let rotated_p = rotate_vector(p, quat);
+
+    let scaled_p = rotated_p * r.xyz;
+    
+    // Calcula a distância do ponto à esfera
+    return (length(scaled_p) - r.w);
 }
 
-fn sdf_torus(p: vec3f, r: vec2f, quat: vec4f) -> f32
+fn sdf_torus(p: vec3f, r: vec2f, quat: vec4f) -> f32 
 {
-  return 0.01;
+    // Rotaciona o ponto com base no quaternion
+    let rotated_p = rotate_vector(p, quat);
+    
+    // Calcula a distância do ponto ao toro
+    let q = vec2f(length(rotated_p.xz) - r.x, rotated_p.y);
+    return length(q) - r.y;
 }
 
 fn sdf_mandelbulb(p: vec3f) -> vec2f
