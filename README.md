@@ -1,3 +1,7 @@
+## Feito por:
+- Henrique Martinelli Frezzatti
+- Nicolas Maciel Queiroga
+
 ## WGSL Raymarcher Template
 Template básico de um Ray Marcher em WGSL (WEBGPU). Tudo o que precisa para fazer o projeto esta aqui.
 
